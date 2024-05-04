@@ -1,7 +1,7 @@
-import { Inter } from "next/font/google";
+import { Inter, Farro } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Farro({ subsets: ["latin"] , weight: '300' });
 
 export const metadata = {
   title: "Create Next App",
