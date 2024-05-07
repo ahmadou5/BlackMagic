@@ -24,9 +24,9 @@ export const ProfileCard = () => {
             <div>Email</div>
             <div className="text-wrap rounded-lg p-3 dark:bg-[#1F2937] dark:text-[#CBD5E1]">
               {user?.email}
-            </div>
-          </div>
+           </div>
         </div>
+      </div>
       </div>
     </div>
   );
