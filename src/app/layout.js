@@ -1,6 +1,6 @@
-import { Inter, Farro } from "next/font/google";
+import { Inter, Farro, Aboreto } from "next/font/google";
 import "./globals.css";
-import { cookieToInitialState } from "@alchemy/aa-alchemy/config";
+// import { cookieToInitialState } from "@alchemy/aa-alchemy/config";
 import { Providers } from "./provider";
 import { headers } from "next/headers";
 import { config } from "./config";
@@ -16,11 +16,11 @@ export const metadata = {
 
 
 export default function RootLayout({ children }) {
-  const initialState = cookieToInitialState(config, headers().get("cookie"));
+  // const initialState = cookieToInitialState(config, headers().get("cookie"));
   return (
     <html lang="en">
       <body className={inter.className}>
-       <Providers initialState={initialState}>
+       <Providers >
        {children}
       </Providers>
       </body>

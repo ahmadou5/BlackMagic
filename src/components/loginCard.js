@@ -11,7 +11,7 @@ export const LogInCard = () => {
   );
   const { authenticate, isPending: isAuthenticatingUser } = useAuthenticate();
   const { isLoadingAccount } = useAccount({
-    type: "MultiOwnerModularAccount",
+  
     skipCreate: true,
   });
 
