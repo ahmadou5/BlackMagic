@@ -47,13 +47,13 @@ export const Navbar = () => {
         {/**for desktop view **/}
         <div
           style={{ "backdrop-filter": "blur(12px)" }}
-          className="lg:w-[55%] w-[90%] ml-auto mr-auto rounded-full bg-white/90 py-1 px-1.5 z-0 mt-8  fixed inset-x-0 top-2 flex justify-center items-center"
+          className="lg:w-[55%] w-[90%] ml-auto mr-auto rounded-full bg-white/90 py-1 px-1.5 z-0 mt-3  fixed inset-x-0 top-2 flex justify-center items-center"
         >
           <div className="lg:py-2.5 py-1.5 lg:px-2.5 px-1.5  mt-auto mb-auto ml-auto mr-auto w-[98%] flex flex-row  h-[90%]">
             <div className="ml-0 mr-auto">
               <Link href={"/"}>
                 <div className="text-sm flex">
-                  <p className="text-black/85 flex text-3xl font-thin ml-1"><img className="h-9 mr-2 w-9 lg:mt-0.5 " src="./not.png"/><span className=" mt-1 font-extrabold">Not</span></p>
+                  <p className="text-black/85 flex text-3xl font-thin ml-1"><img className="h-9 mr-2 w-9 lg:mt-0.5 " src="./f2.png"/><span className=" mt-1 font-extrabold">Not</span></p>
                 </div>
               </Link>
             </div>

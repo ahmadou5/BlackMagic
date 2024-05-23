@@ -1,5 +1,6 @@
 "use client";
 
+import { Home2 } from "@/components/Home";
 import { LogInCard } from "@/components/loginCard";
 import { Navbar } from "@/components/Navbar";
 import { ProfileCard } from "@/components/ProfileCard";
@@ -12,9 +13,9 @@ export default function Home() {
   const user = useUser();
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-4 p-24">
+    <main className="flex min-h-screen flex-col items-center justify-center gap-4 px-4 py-4">
       <Navbar />
-      Hello World
+      <Home2 />
     </main>
   );
 }
