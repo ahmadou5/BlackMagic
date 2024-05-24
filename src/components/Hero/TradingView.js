@@ -3,7 +3,7 @@ import React, { useEffect, useRef, memo } from 'react';
 
 function TradingViewWidget() {
   const container = useRef();
-
+  const symbol = 'Apple'
   useEffect(
     () => {
       const script = document.createElement("script");
@@ -67,9 +67,8 @@ function TradingViewWidget() {
   );
 
   return (
-    <div className="tradingview-widget-container" ref={container}>
-      <div className="tradingview-widget-container__widget"></div>
-      <div className="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span className="blue-text">Track all markets on TradingView</span></a></div>
+    <div className="tradingview-widget-container rounded-2xl " ref={container}>
+      <div className="tradingview-widget-container__widget rounded-2xl"></div>
     </div>
   );
 }

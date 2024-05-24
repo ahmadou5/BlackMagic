@@ -56,7 +56,7 @@ export const Hero = () => {
           
         </div>
        
-        <div className="w-[96%] ml-auto mr-auto rounded-xl mt-14 bg-black/55 h-[3900px] ">
+        <div className="w-[96%] ml-auto mr-auto rounded-xl mt-14 bg-black/55 h-[700px] ">
             <TradingView />
         </div>
     </div>
