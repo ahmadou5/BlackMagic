@@ -63,13 +63,13 @@ export const Hero = () => {
             <TradingView />
         </div>
         <div className="w-[96%] py-2 px-2 ml-auto mr-auto bg-black/0 rounded-xl flex mt-14  h-72 ">
-            <div className="bg-black/10 ml-auto py-8 px-9 w-[95%] text-center h-64 rounded-2xl mr-auto">
+            <div className="bg-white/5 ml-auto py-8 px-9 w-[95%] text-center h-64 rounded-2xl mr-auto">
                 <p className="text-3xl mt-6">Dive into the world of limitless possibilities with our synthetic tokens. Backed by ETH, these tokens reflect the value of top global stocks, allowing you to invest securely and effortlessly. Break free from borders and explore a new era of decentralized finance.</p>
             </div>
             
         </div>
         <div className="w-[96%] py-2 px-2 ml-auto mr-auto rounded-xl flex mt-14  h-72 ">
-            <div className="bg-black/10 py-8 px-9 flex flex-col ml-auto w-[48%] h-64 rounded-2xl mr-auto">
+            <div className="bg-white/5 py-8 px-9 flex flex-col ml-auto w-[48%] h-64 rounded-2xl mr-auto">
                 <p className="text-2xl text-center">Stocks Simplified</p>
                 <div className="flex space-x-7 ml-auto mr-auto mt-12">
                 {stocks && stocks.map((item,i) => (
