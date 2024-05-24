@@ -76,8 +76,8 @@ export const Hero = () => {
                 {stocks && stocks.map((item,i) => (
                     <>
                     <div className="flex flex-wrap w-auto">
-                    <div className="w-12 h-12 rounded-full bg-white py-0.5 px-0.5 ">
-                 <img  src={item.imgSrc} className=" rounded-full" />
+                    <div className="w-12 h-12 rounded-full bg-white flex flex-wrap  py-0.5 px-0.5 ">
+                 <img  src={item.imgSrc} className="ml-auto mr-auto rounded-full" />
                 </div>
                     </div>
                     </>
