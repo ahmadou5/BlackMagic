@@ -1,4 +1,5 @@
 import { Each } from "../Each"
+import TradingView from "./TradingView"
 
 export const Hero = () => {
     const handleClick = () => alert('Hey Im clickeed') 
@@ -54,7 +55,10 @@ export const Hero = () => {
         
           
         </div>
-        <div className="w-[96%] ml-auto mr-auto rounded-xl mt-14 bg-black/5 h-[900px] ">Hey</div>
+       
+        <div className="w-[96%] ml-auto mr-auto rounded-xl mt-14 bg-black/55 h-[3900px] ">
+            <TradingView />
+        </div>
     </div>
 )
 }
