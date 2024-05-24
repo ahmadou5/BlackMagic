@@ -47,7 +47,7 @@ export const Navbar = () => {
         {/**for desktop view **/}
         <div
           style={{ "backdrop-filter": "blur(12px)" }}
-          className="lg:w-[55%] w-[90%] ml-auto mr-auto rounded-full bg-black/15 py-1 px-1.5 z-0 mt-3  fixed inset-x-0 top-2 flex justify-center items-center"
+          className="lg:w-[55%] w-[90%] ml-auto mr-auto rounded-full bg-white/10 py-1 px-1.5 z-0 mt-3  fixed inset-x-0 top-2 flex justify-center items-center"
         >
           <div className="lg:py-2.5 py-1.5 lg:px-2.5 px-1.5  mt-auto mb-auto ml-auto mr-auto w-[98%] flex flex-row  h-[90%]">
             <div className="ml-0 mr-auto">
@@ -55,11 +55,11 @@ export const Navbar = () => {
                 <div className="text-sm flex">
                   <p className="text-white/85 flex text-3xl font-thin ml-1"> <div className="w-12 h-12  mr-2 lg:mt-0.5 rounded-full bg-white flex flex-wrap  py-0.5 px-0.5 ">
                  <img src="./stoxicon.png" className="ml-auto mr-auto rounded-full" />
-                </div><span className=" mt-1 font-extrabold">StoX</span></p>
+                </div><span className=" mt-2 font-extrabold">StoX</span></p>
                 </div>
               </Link>
             </div>
-            <div className="py-2 lg:flex hidden text-white px-1">
+            <div className="py-2.5 mt-1 lg:flex hidden text-white px-1">
               <div className="flex justify-between">
                 <div className="ml-5 mr-5">Market</div>
                 <div  className="ml-5 mr-5">Trade</div>
