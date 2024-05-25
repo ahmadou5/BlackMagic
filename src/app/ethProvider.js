@@ -1,43 +1,40 @@
-'use client'
-import '@rainbow-me/rainbowkit/styles.css';
+"use client";
+import "@rainbow-me/rainbowkit/styles.css";
 import {
   getDefaultConfig,
   RainbowKitProvider,
-} from '@rainbow-me/rainbowkit';
-import { WagmiProvider } from 'wagmi';
-import {
-
-  arbitrum,
-  arbitrumGoerli,
-  arbitrumNova,
-  arbitrumSepolia
-} from 'wagmi/chains';
-import {
-  QueryClientProvider,
-  QueryClient,
-} from "@tanstack/react-query";
-
-
+  darkTheme,
+} from "@rainbow-me/rainbowkit";
+import { WagmiProvider } from "wagmi";
+import { sepolia, polygonAmoy } from "wagmi/chains";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
 export const config = getDefaultConfig({
-  appName: 'Beat',
-  projectId: 'fa7b299471fa848b2dc52a5e1529ac37',
-  chains: [ // x1Testnet,
-    arbitrum,
-    arbitrumGoerli,
-    arbitrumNova,
-    arbitrumSepolia
+  appName: "Beat",
+  projectId: "fa7b299471fa848b2dc52a5e1529ac37",
+  chains: [
+    // x1Testnet,
+    sepolia,
+    polygonAmoy,
   ],
   ssr: true, // If your dApp uses server side rendering (SSR)
 });
 
 const queryClient = new QueryClient();
 
-export const EthProvider = ({children}) => {
+export const EthProvider = ({ children }) => {
   return (
-    <WagmiProvider  config={config}>
+    <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
-        <RainbowKitProvider coolMode={true}>
+        <RainbowKitProvider
+          coolMode={true}
+          theme={darkTheme({
+            accentColor: "#75f07f",
+            accentColorForeground: "white",
+            fontStack: "system",
+            overlayBlur: "small",
+          })}
+        >
           {children}
         </RainbowKitProvider>
       </QueryClientProvider>

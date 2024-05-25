@@ -1,9 +1,10 @@
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Image from "next/image";
-// import { FaArrowDown19 } from "react-icons/fa6";
+import ShimmerButton from "../magicui/ShimmerButton";
+
 export const CustomButton = () => {
-    return (
-        <section className='flex items-center gap-[0.62rem] justify-end w-full  '>
+  return (
+    <section className="flex items-center gap-[0.62rem] justify-end w-full">
       <ConnectButton.Custom>
         {({
           account,
@@ -35,35 +36,50 @@ export const CustomButton = () => {
               {(() => {
                 if (!connected) {
                   return (
-                    <button
+                    <ShimmerButton
                       onClick={openConnectModal}
-                      type="button"
-                      className='rounded-[3.125rem] w-[200px] h-10 bg-white/90 text-black border-[#424242]'
+                      shimmerColor="#75f07f"
+                      shimmerSize="0.1em"
+                      shimmerDuration="2s"
+                      borderRadius="100px"
+                      background="rgba(0, 0, 0, 1)"
+                      className="rounded-[3.125rem] w-[200px] h-10"
                     >
-                      Connect Wallet
-                    </button>
+                      <span className="text-[#75f07f] font-semibold">
+                        Connect
+                      </span>
+                    </ShimmerButton>
                   );
                 }
 
                 if (chain.unsupported) {
                   return (
-                    <button
+                    <ShimmerButton
                       onClick={openChainModal}
-                      type="button"
-                      className="rounded-[3.125rem] p-[0.62rem] border-[0.5px] w-fit h-10 bg-[#9e2f2f] text-white border-[#424242]"
+                      shimmerColor="#EE4E4E"
+                      shimmerSize="0.1em"
+                      shimmerDuration="2s"
+                      borderRadius="100px"
+                      background="rgba(0, 0, 0, 1)"
+                      className="rounded-[3.125rem] w-[200px] h-10"
                     >
-                      Wrong network
-                    </button>
+                      <span className="text-[#EE4E4E] font-semibold">
+                        Wrong Network
+                      </span>
+                    </ShimmerButton>
                   );
                 }
 
                 return (
                   <div style={{ display: "flex", gap: 12 }}>
-                    <button
+                    {/* <ShimmerButton
                       onClick={openChainModal}
-                      style={{ display: "flex", alignItems: "center" }}
-                      type="button"
-                      className="bg-black/45 text-white p-[0.825rem] h-10 rounded-[3.125rem] flex items-center gap-[0.62rem]"
+                      shimmerColor="#75f07f"
+                      shimmerSize="0.1em"
+                      shimmerDuration="2s"
+                      borderRadius="100px"
+                      background="rgba(0, 0, 0, 0.6)"
+                      className="rounded-[3.125rem] w-[200px] h-10"
                     >
                       {chain.hasIcon && (
                         <div
@@ -78,31 +94,30 @@ export const CustomButton = () => {
                           {chain.iconUrl && (
                             <Image
                               alt={chain.name ?? "Chain icon"}
-                              height={5}
-                              width={5}
+                              height={28}
+                              width={28}
                               src={chain.iconUrl}
                               className="w-auto h-auto xl:w-7 xl:h-7"
                             />
                           )}
                         </div>
                       )}
-                      {chain.name}
-                      {/** <FaArrowDown19
-                        width={10}
-                        height={10}
-                        className="hidden xl:inline-block"
-                        src="https://github.com/Jay035/Solimax-v2/blob/main/public/icons/chevron-down.svg"
-                        alt="chevron-down"
-                    />**/}
-                    </button>
+                      <span className="text-[#75f07f]">{chain.name}</span>
+                    </ShimmerButton> */}
 
-                    <button
+                    <ShimmerButton
                       onClick={openAccountModal}
-                      type="button"
-                      className="bg-black/95 text-white p-[0.725rem] px-6 h-10 rounded-[3.125rem] flex items-center gap-[0.62rem]"
+                      shimmerColor="#75f07f"
+                      shimmerSize="0.1em"
+                      shimmerDuration="2s"
+                      borderRadius="100px"
+                      background="rgba(0, 0, 0, 0.95)"
+                      className="rounded-[3.125rem] w-[200px] h-10"
                     >
-                      {account.displayName}
-                    </button>
+                      <span className="text-[#75f07f]">
+                        {account.displayName}
+                      </span>
+                    </ShimmerButton>
                   </div>
                 );
               })()}
@@ -111,5 +126,5 @@ export const CustomButton = () => {
         }}
       </ConnectButton.Custom>
     </section>
-    )
-} 
+  );
+};

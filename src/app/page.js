@@ -1,9 +1,8 @@
 "use client";
 
-import { Home2 } from "@/components/Home";
-import { LogInCard } from "@/components/loginCard";
-import { Navbar } from "@/components/Navbar";
-import { ProfileCard } from "@/components/ProfileCard";
+import { Home2 } from "../components/Home/index";
+import { Navbar } from "../components/Navbar/index";
+import { ProfileCard } from "../components/ProfileCard";
 import { useAccount, useUser } from "@alchemy/aa-alchemy/react";
 
 export default function Home() {
