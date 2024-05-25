@@ -14,15 +14,19 @@
     "@alchemy/aa-core": "^3.12.0",
     "@rainbow-me/rainbowkit": "^2.1.0",
     "@tanstack/react-query": "^5.37.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.2.6",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
+    "tailwind-merge": "^2.3.0",
     "viem": "^2.12.0",
     "wagmi": "^2.9.4"
   },
   "devDependencies": {
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
+    "mini-css-extract-plugin": "^2.9.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.1"
   }

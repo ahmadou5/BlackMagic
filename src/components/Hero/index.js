@@ -1,4 +1,5 @@
 import { Each } from "../Each"
+import { GoogleGeminiEffect } from "../Gemini"
 import TradingView from "./TradingView"
 
 export const Hero = () => {
@@ -27,7 +28,7 @@ export const Hero = () => {
     ]
     return (
     <div className="w-[100%] h-auto py-8 px-8 flex flex-col rounded-sm">
-        
+         <GoogleGeminiEffect pathLengths={2}  title={'StoX '} description={'Stock Simplified'} />
         <div className="w-[96%] mt-8 flex bg-white/5 py-2 px-2 h-[150px] flex-col rounded-3xl ml-auto mr-auto">
         <div className="mt-3 mr-3 ml-8 px-6 text-end">
             <p>View All Markets</p>
@@ -63,6 +64,7 @@ export const Hero = () => {
             <TradingView />
         </div>
         <div className="w-[96%] py-2 px-2 ml-auto mr-auto bg-black/0 rounded-xl flex mt-14  h-72 ">
+          
             <div className="bg-white/5 ml-auto py-8 px-9 w-[100%] text-center h-64 rounded-2xl mr-auto">
                 <p className="text-3xl mt-6">Dive into the world of limitless possibilities with our synthetic tokens. Backed by ETH, these tokens reflect the value of top global stocks, allowing you to invest securely and effortlessly. Break free from borders and explore a new era of decentralized finance.</p>
             </div>
@@ -86,7 +88,9 @@ export const Hero = () => {
             <div className=" ml-auto w-[48%] h-64 rounded-2xl mr-auto">
                 
             </div>
+
         </div>
+       
     </div>
 )
 }
