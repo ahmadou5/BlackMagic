@@ -12,12 +12,8 @@ import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 export const config = getDefaultConfig({
   appName: "Beat",
   projectId: "fa7b299471fa848b2dc52a5e1529ac37",
-  chains: [
-    // x1Testnet,
-    sepolia,
-    polygonAmoy,
-  ],
-  ssr: true, // If your dApp uses server side rendering (SSR)
+  chains: [sepolia, polygonAmoy],
+  ssr: true,
 });
 
 const queryClient = new QueryClient();
