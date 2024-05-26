@@ -60,8 +60,8 @@ const RadialGradient = ({
   type = "circle",
   from = "rgb(117, 240, 127, 0.3)",
   to = "hsla(0, 0%, 0%, 0)",
-  size = 300,
-  origin = "center",
+  size = 400,
+  origin = "bottom",
   className,
 }: RadialProps) => {
   const styles: CSSProperties = {

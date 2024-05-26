@@ -1,35 +1,11 @@
 import Image from "next/image";
 
-import { Each } from "../Each";
 import RadialGradient from "../magicui/Gradient";
-import TradingView from "./TradingView";
 
 export const Hero = () => {
-  const stocks = [
-    {
-      name: "Apple",
-      id: 3,
-      imgSrc: "./apple--big.svg",
-    },
-    {
-      name: "Alphabet Inc",
-      id: 3,
-      imgSrc: "./alphabet--big.svg",
-    },
-    {
-      name: "NVIDIA",
-      id: 3,
-      imgSrc: "./nvidia--big.svg",
-    },
-    {
-      name: "Tesla",
-      id: 3,
-      imgSrc: "./tesla--big.svg",
-    },
-  ];
   return (
     <div className="relative flex items-center justify-center h-screen">
-      <div className="relative flex flex-col items-center justify-between w-11/12 max-w-6xl p-10 rounded-lg bg-white shadow-lg h-5/6 overflow-hidden">
+      <div className="relative flex flex-col items-center justify-between w-11/12 max-w-6xl p-10 rounded-lg bg-white shadow-2xl h-5/6 overflow-hidden">
         <RadialGradient />
         <h1 className="z-10 mb-6 text-5xl font-bold text-center text-black w-full">
           Stocks, Tokenized
@@ -46,10 +22,10 @@ export const Hero = () => {
           </div>
           <div className="w-full md:w-1/2 flex justify-center md:justify-center pl-4">
             <Image
-              src="/path/to/your/image.jpg"
+              src="/hero2.jpg"
               alt="Hero Image"
               width={500}
-              height={300}
+              height={500}
               className="object-cover rounded-lg shadow-lg"
             />
           </div>
