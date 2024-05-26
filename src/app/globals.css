@@ -18,9 +18,12 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #161616
-     
   ;
+}
+
+html, body, #__next {
+  height: 100%;
+  margin: 0;
 }
 
 @layer utilities {
