@@ -59,9 +59,7 @@ const Footer = () => {
 
             
 
-            <div className="col-span-2 md:col-span-1 lg:col-span-2 lg:pl-8">
-              <CustomButton />
-            </div>
+            
         </div>
 
         <hr className="mt-16 mb-10 border-gray-200" />

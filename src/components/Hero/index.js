@@ -20,6 +20,13 @@ export const Hero = () => {
     const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
 
     const handleClick = () => alert('Hey Im clickeed') 
+    const chains = [
+        {
+            name: 'Butt',
+            id:2,
+            imgSrc: './chain1.svg'
+        }
+    ]
     const stocks = [
         {
             name: 'Apple',
@@ -111,7 +118,7 @@ export const Hero = () => {
             <div className="bg-white/5 py-8 px-9 flex mb-4 mt-6 flex-col w-[48%] h-64 rounded-2xl ml-auto">
                 <p className="text-2xl text-center"></p>
                 <div className="flex space-x-7 ml-auto mr-auto mt-12">
-                {stocks && stocks.map((item,i) => (
+                {chains && chains.map((item,i) => (
                     <>
                     <div className="w-full flex ">
                     <div className="w-20 h-20 rounded-full   ">
