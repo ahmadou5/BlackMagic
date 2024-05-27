@@ -6,7 +6,7 @@ import {
 } from '@rainbow-me/rainbowkit';
 import { WagmiProvider } from 'wagmi';
 import {
-
+  sepolia,
   arbitrum,
   arbitrumGoerli,
   arbitrumNova,
@@ -23,10 +23,7 @@ export const config = getDefaultConfig({
   appName: 'Beat',
   projectId: 'fa7b299471fa848b2dc52a5e1529ac37',
   chains: [ // x1Testnet,
-    arbitrum,
-    arbitrumGoerli,
-    arbitrumNova,
-    arbitrumSepolia
+    sepolia
   ],
   ssr: true, // If your dApp uses server side rendering (SSR)
 });

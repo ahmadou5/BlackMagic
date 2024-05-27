@@ -2,6 +2,7 @@ import { Each } from "../Each"
 import { React, useRef, } from 'react'
 import { useScroll, useTransform } from "framer-motion";
 import { GoogleGeminiEffect } from "../Gemini"
+import {IoArrowForward } from 'react-icons/io5'
 import TradingView from "./TradingView"
 import { LampContainer } from "../Lamp";
 
@@ -50,7 +51,7 @@ export const Hero = () => {
           pathLengthThird,
           pathLengthFourth,
           pathLengthFifth,
-        ]}  title={'StoX '} description={'Stock Simplified'} />
+        ]}  title={'StoX '} description={'Stock Simplified'} className={'z-20'}/>
         </div>
         <div className="w-[96%] mt-8 flex bg-white/5 py-2 px-2 h-[150px] flex-col rounded-3xl ml-auto mr-auto">
         <div className="mt-3 mr-3 ml-8 px-6 text-end">
@@ -86,18 +87,14 @@ export const Hero = () => {
         <div className="w-[96%] py-2 px-2 ml-auto mr-auto rounded-xl mt-14 bg-white/5 h-[580px] ">
             <TradingView />
         </div>
-        <div className="w-[96%] py-2 px-2 ml-auto mr-auto bg-black/0 rounded-xl flex mt-14  h-72 ">
-          
-            <div className=" ml-auto mb-auto mt-auto py-8 px-9 w-[100%] text-center h-64 rounded-2xl mr-auto">
-            
-                  <p className="text-3xl mt-6">Dive into the world of limitless possibilities with our synthetic tokens. Backed by ETH, these tokens reflect the value of top global stocks, allowing you to invest securely and effortlessly. Break free from borders and explore a new era of decentralized finance.</p>
-                
-            </div>
-            
+        <div className="w-[96%] py-10 px-2 ml-auto mr-auto bg-black/0 rounded-xl flex mt-20 mb-auto  h-[80px] ">
+           <LampContainer  >
+             <p className="text-2xl py-8 px-10 mt-6">Dive into the world of limitless possibilities with our synthetic tokens. Backed by ETH, these tokens reflect the value of top global stocks, allowing you to invest securely and effortlessly. Break free from borders and explore a new era of decentralized finance.</p>
+           </LampContainer>
         </div>
-        <div className="w-[96%] py-2 px-2 ml-auto mr-auto rounded-xl flex flex-col mt-14  h-72 ">
+        <div className="w-[96%] py-2 px-2 ml-auto mr-auto rounded-xl flex h-auto flex-col mt-[500px] ">
             <div className="bg-white/5 py-8 px-9 flex flex-col ml-0 mt-5 mb-6 w-[48%] h-64 rounded-2xl mr-auto">
-                <p className="text-2xl text-center">Stocks Simplified</p>
+                <p className="text-2xl text-center"></p>
                 <div className="flex space-x-7 ml-auto mr-auto mt-12">
                 {stocks && stocks.map((item,i) => (
                     <>
@@ -125,10 +122,7 @@ export const Hero = () => {
                 ))}
                 </div>
             </div>
-
-        </div>
-        
-       
+        </div>  
     </div>
 )
 }
