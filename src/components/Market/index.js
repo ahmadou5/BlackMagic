@@ -1,4 +1,11 @@
+'use client'
+import { useState } from "react"
+import { useRouter } from "next/navigation"
+
 export const Market2 = () => {
+
+    const [search, setSearch] = useState('')
+    const route = useRouter()
     const stocks = [
         {
             name: 'Apple',
@@ -115,29 +122,38 @@ export const Market2 = () => {
        
         </div>
         </div>
-        <div className="w-[96%] mt-2 flex bg-white/15 py-2 px-2 h-auto flex-col rounded-3xl ml-auto mr-auto">
-        <div className="mt-3 flex mr-3 ml-8 mb-12 px-6">
-            <p>Stocks</p>
-            <div>
-                hey
+        <div className="w-[96%] mt-2 flex bg-white/15 py-1 px-2 h-auto flex-col rounded-3xl ml-auto mr-auto">
+        <div className="mt-4 flex mr-3 ml-8 mb-2 py-1 px-6">
+           <div className="ml-5 py-4 text-2xl mt-2 mr-auto">
+                 Wrapped Stocks
+           </div>
+            
+            <div className=" ml-auto mr-3 w-[20%] mt-4 h-[65px]">
+                    <div className="h-[60%] mt-auto mb-auto bg-transparent w-[95%] text-lg ml-auto mr-auto">
+                        <input onChange={(e) => setSearch(e.target.value)} className=" h-[100%] w-[100%] outline-none rounded-full bg-black/15 py-3 px-3" type="text" placeholder="Search Stock"/>
+                    </div>
             </div>
         </div>
         <div className="flex flex-col">
-        {stocks && stocks.map((item, i) => (
+        {stocks && stocks.filter((chain) => {
+                    return search.toLowerCase() == '' ?
+                    chain : chain.name.toLowerCase().includes(search)
+                   }).map((chain,i) => (
             <>
-            <div className="w-[98%] mt-2 mb-2 cursor-pointer hover:bg-white/25 ml-auto mr-auto py-1.5 px-2.5 h-[56%] flex rounded-full bg-black/45">
+            <div onClick={() => route.push(`/market/${chain.name}`) } className="w-[98%] mt-2 mb-2 cursor-pointer hover:bg-white/25 ml-auto mr-auto py-1.5 px-2.5 h-[56%] flex rounded-full bg-black/45">
                 <div className="w-12 h-12 rounded-full bg-white py-0.5 px-0.5 ">
-                 <img  src={item.imgSrc} className=" rounded-full" />
+                 <img  src={chain.imgSrc} className=" rounded-full" />
                 </div>
-                <div className="px-1 w-[60%] py-0.5 ml-5">
-                <div className="text-start">
-                    {item.name}
+                <div className="px-1 ml-auto w-[80%] py-2 ">
+              
+                <div className="flex items-end mt-1.5 text-end">
+                <div className="text-center">
+                    {chain.name}
                 </div>
-                <div className="flex items-end text-end">
-                   <div className="ml-auto mr-auto">
+                   <div className="ml-auto text-center mr-12">
                     $123
                    </div>
-                   <div className="ml-auto text-green-600 mr-auto">
+                   <div className="ml-auto text-green-600 mr-8">
                     3.56%
                    </div>
                 </div>
