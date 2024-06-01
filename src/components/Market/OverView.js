@@ -1,4 +1,6 @@
+'use client'
 import { Suspense } from "react"
+import { TradingViewWidget } from "../Chart"
 
 
 export const OverView = ({slug}) => {
@@ -16,7 +18,7 @@ export const OverView = ({slug}) => {
                     <p className="text-4xl">{`${slug}`}</p>
                 </div>
                 <div className="h-[25%] ml-12">
-                    <p className="text-lg">{slug}</p>
+                    <p className="text-lg">{`X ${slug}`}</p>
                 </div>
                 <div className="mb-5 flex h-[27%]">
                     <div className="flex">
@@ -31,9 +33,22 @@ export const OverView = ({slug}) => {
             </Suspense>
             
             <div className="w-[40%]  py-12  flex items-center mt-4 px-12">
-                <button className="mt-6 bg-white rounded-3xl text-black ml-auto mr-12 h-10 w-[210px]">buy</button>
+              <button className="w-[214px] h-10 border text-xl border-white ml-auto mr-36 rounded-xl hover:bg-white/85 hover:text-black ">{`Mint X${slug}`}</button>
             </div>
         </div>
+        <div className="py-3 mt-5 px-12">
+            <p className="text-3xl">{`${slug} Chart>`}</p>
+        </div>
+        <div className="w-[97%] h-[590px] ml-auto mr-auto mb-[120px] py-4 px-2 mt-[50px] rounded-2xl bg-white/85">
+          <TradingViewWidget slug={slug}/>
+        </div>
+        <div className="w-[97%] h-[590px] ml-auto mr-auto mb-[120px] py-4 px-2 mt-[90px] rounded-2xl">
+            <div>
+                {slug} About
+            </div>
+          
+        </div>
+        
     </div>
 )
 }

@@ -54,7 +54,7 @@ export const Navbar = () => {
               <Link href={"/"}>
                 <div className="text-sm flex">
                   <p className="text-white/85 flex text-3xl font-thin ml-1"> <div className="w-12 h-12  mr-2 lg:mt-0.5 rounded-full bg-white flex flex-wrap  py-0.5 px-0.5 ">
-                 <img src="./stoxicon.png" className="ml-auto mr-auto rounded-full" />
+                 <img src="https://black-magic-seven.vercel.app/stoxicon.png" className="ml-auto mr-auto rounded-full" />
                 </div><span className=" mt-2.5 font-extrabold">StoX</span></p>
                 </div>
               </Link>
