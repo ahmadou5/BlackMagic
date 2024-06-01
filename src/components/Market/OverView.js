@@ -33,18 +33,18 @@ export const OverView = ({slug}) => {
             </Suspense>
             
             <div className="w-[40%]  py-12  flex items-center mt-4 px-12">
-              <button className="w-[214px] h-10 border text-xl border-white ml-auto mr-36 rounded-xl hover:bg-white/85 hover:text-black ">{`Mint X${slug}`}</button>
+              <button className="w-[214px] h-10 border text-xl border-white ml-auto mr-36 rounded-xl hover:bg-white/8  5 hover:text-black ">{`Mint X${slug}`}</button>
             </div>
         </div>
         <div className="py-3 mt-5 px-12">
-            <p className="text-3xl">{`${slug} Chart>`}</p>
+            <p className="text-4xl">{`${slug} Chart>`}</p>
         </div>
-        <div className="w-[97%] h-[590px] ml-auto mr-auto mb-[120px] py-4 px-2 mt-[50px] rounded-2xl bg-white/85">
+        <div className="w-[97%] h-[590px] ml-auto mr-auto text-center mb-[120px] py-1 px-2 mt-[20px] rounded-2xl bg-white/0">
           <TradingViewWidget slug={slug}/>
         </div>
         <div className="w-[97%] h-[590px] ml-auto mr-auto mb-[120px] py-4 px-2 mt-[90px] rounded-2xl">
-            <div>
-                {slug} About
+            <div className="py-2 px-6 text-4xl">
+            About {slug}
             </div>
           
         </div>
