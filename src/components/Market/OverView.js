@@ -1,9 +1,13 @@
 'use client'
-import { Suspense } from "react"
+import { Suspense, useState } from "react"
 import { TradingViewWidget } from "../Chart"
+import { MintCard } from "../Cards/MintCard"
+import { GlobalContext } from "@/context/context"
 
 
 export const OverView = ({slug}) => {
+    
+    const { mintCard, setMintCard } = GlobalContext()
     return(
     <div className="w-[100%] mb-20 h-[300px] ">
         <div className="flex ">
@@ -33,7 +37,7 @@ export const OverView = ({slug}) => {
             </Suspense>
             
             <div className="w-[40%]  py-12  flex items-center mt-4 px-12">
-              <button className="w-[214px] h-10 border text-xl border-white ml-auto mr-36 rounded-xl hover:bg-white/75  hover:border-black 5 hover:text-black ">{`Mint X${slug}`}</button>
+              <button onClick={() => setMintCard(true)} className="w-[214px] h-10 border text-xl border-white ml-auto mr-36 rounded-xl hover:bg-white/75  hover:border-black 5 hover:text-black ">{`Mint X${slug}`}</button>
             </div>
         </div>
         <div className="py-3 mt-5 px-12">
@@ -90,6 +94,7 @@ export const OverView = ({slug}) => {
               </div>
             </div>
         </div>
+        {mintCard && <MintCard/>}
         
     </div>
 )
