@@ -33,20 +33,62 @@ export const OverView = ({slug}) => {
             </Suspense>
             
             <div className="w-[40%]  py-12  flex items-center mt-4 px-12">
-              <button className="w-[214px] h-10 border text-xl border-white ml-auto mr-36 rounded-xl hover:bg-white/8  5 hover:text-black ">{`Mint X${slug}`}</button>
+              <button className="w-[214px] h-10 border text-xl border-white ml-auto mr-36 rounded-xl hover:bg-white/75  hover:border-black 5 hover:text-black ">{`Mint X${slug}`}</button>
             </div>
         </div>
         <div className="py-3 mt-5 px-12">
             <p className="text-4xl">{`${slug} Chart>`}</p>
         </div>
-        <div className="w-[97%] h-[590px] ml-auto mr-auto text-center mb-[120px] py-1 px-2 mt-[20px] rounded-2xl bg-white/0">
+        <div className="w-[96%] h-[590px] ml-auto mr-auto text-center mb-[120px] py-5 px-5 bg-white mt-[20px] rounded-3xl bg-white/0">
           <TradingViewWidget slug={slug}/>
         </div>
         <div className="w-[97%] h-[590px] ml-auto mr-auto mb-[120px] py-4 px-2 mt-[90px] rounded-2xl">
-            <div className="py-2 px-6 text-4xl">
-            About {slug}
+            <div className="py-2 px-4 mb-4 text-4xl">
+              About {slug}
             </div>
-          
+            
+            <div className="w-[100%] py-3 bg-white/0 flex h-[125px]">
+               <div className="bg-white/5 py-2 px-4 rounded-xl w-[24%] ml-auto mr-auto">
+                 <p className="text-md py-1 font-bold">Sector</p>
+                 <p className="text-xl py-2 font-semibold">Sector</p>
+               </div>
+               <div className="bg-white/5 py-2 px-4 rounded-xl w-[24%] ml-auto mr-auto">
+                 <p className="text-md py-1 font-bold">Industry</p>
+                 <p className="text-xl py-2 font-semibold">Sector</p>
+               </div>
+               <div className="bg-white/5 py-2 px-4 rounded-xl w-[24%] ml-auto mr-auto">
+                 <p className="text-md py-1 font-bold">CEO</p>
+                 <p className="text-xl py-2 font-semibold">Sector</p>
+               </div>
+               <div className="bg-white/5 py-2 px-4 rounded-xl w-[24%] ml-auto mr-auto">
+                 <p className="text-md py-1 font-bold">Website</p>
+                 <p className="text-xl py-2 font-semibold">Sector</p>
+               </div>
+            </div>
+            <div className="w-[100%] py-3 bg-white/0 flex h-[125px]">
+               <div className="bg-white/5 py-2 px-4 rounded-xl w-[24%] ml-auto mr-auto">
+                 <p className="text-md py-1 font-bold">HeadQuarter</p>
+                 <p className="text-xl py-2 font-semibold">Sector</p>
+               </div>
+               <div className="bg-white/5 py-2 px-4 rounded-xl w-[24%] ml-auto mr-auto">
+                 <p className="text-md py-1 font-bold">Employees</p>
+                 <p className="text-xl py-2 font-semibold">Sector</p>
+               </div>
+               <div className="bg-white/5 py-2 px-4 rounded-xl w-[24%] ml-auto mr-auto">
+                 <p className="text-md py-1 font-bold">Founded</p>
+                 <p className="text-xl py-2 font-semibold">Sector</p>
+               </div>
+               <div className="bg-white/5 py-2 px-4 rounded-xl w-[24%] ml-auto mr-auto">
+                 <p className="text-md py-1 font-bold">Market Cap</p>
+                 <p className="text-xl py-2 font-semibold">Sector</p>
+               </div>
+               
+            </div>
+            <div className="w-[100%] py-3 bg-white/0 flex h-[125px]">
+              <div className="bg-white/5 py-2 px-4 rounded-xl w-[100%] h-auto ml-auto mr-auto">
+                <p className="text-xl text-center py-3 px-3">fhkkusrdytfd</p>
+              </div>
+            </div>
         </div>
         
     </div>
