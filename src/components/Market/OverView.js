@@ -3,11 +3,12 @@ import { Suspense, useState } from "react"
 import { TradingViewWidget } from "../Chart"
 import { MintCard } from "../Cards/MintCard"
 import { GlobalContext } from "@/context/context"
+import { RedeemCard } from "../Cards/RedeemCard"
 
 
 export const OverView = ({slug}) => {
-    
-    const { mintCard, setMintCard } = GlobalContext()
+    const redeemable = true
+    const { mintCard, setMintCard,  redeemCard, setRedeemCard  } = GlobalContext()
     return(
     <div className="w-[100%] mb-20 h-[300px] ">
         <div className="flex ">
@@ -36,18 +37,19 @@ export const OverView = ({slug}) => {
             </div>
             </Suspense>
             
-            <div className="w-[40%]  py-12  flex items-center mt-4 px-12">
-              <button onClick={() => setMintCard(true)} className="w-[290px] h-10 border text-xl border-white ml-auto mr-36 rounded-xl hover:bg-white/75  hover:border-black 5 hover:text-black ">{`Mint X${slug}`}</button>
+            <div className="w-[40%]  py-12  flex items-center mt-4 px-3">
+              {redeemable && <button onClick={() => setRedeemCard(true)} className="w-[190px] h-10 border text-xl border-white ml-3 mr-3 bg-red-600/0 rounded-xl hover:bg-white  hover:border-black 5 hover:text-black ">{`Redeem X${slug}`}</button>}
+              <button onClick={() => setMintCard(true)} className="w-[190px] h-10 border text-xl bg-green-500/0 border-white ml-3 mr-36 rounded-xl hover:bg-white  hover:border-black 5 hover:text-black ">{`Mint X${slug}`}</button>
             </div>
         </div>
         <div className="py-3 mt-5 px-12">
-            <p className="text-4xl">{`${slug} Chart>`}</p>
+            <p className="text-4xl font-extrabold">{`${slug} Chart>`}</p>
         </div>
         <div className="w-[96%] h-[590px] ml-auto mr-auto text-center mb-[120px] py-5 px-5 bg-white mt-[20px] rounded-3xl bg-white/0">
           <TradingViewWidget slug={slug}/>
         </div>
         <div className="w-[97%] h-[590px] ml-auto mr-auto mb-[120px] py-4 px-2 mt-[90px] rounded-2xl">
-            <div className="py-2 px-4 mb-4 text-4xl">
+            <div className="py-2 px-4 mb-4 font-extrabold text-4xl">
               About {slug}
             </div>
             
@@ -95,7 +97,7 @@ export const OverView = ({slug}) => {
             </div>
         </div>
         {mintCard && <MintCard slug={slug}/>}
-        
+        {redeemCard && <RedeemCard slug={slug} />}
     </div>
 )
 }

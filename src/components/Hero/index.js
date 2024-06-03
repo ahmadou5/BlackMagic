@@ -5,6 +5,7 @@ import { GoogleGeminiEffect } from "../Gemini"
 import {IoArrowForward } from 'react-icons/io5'
 import TradingView from "./TradingView"
 import { LampContainer } from "../Lamp";
+import { useRouter } from "next/navigation";
 
 export const Hero = () => {
     const ref = useRef(null);
@@ -18,7 +19,7 @@ export const Hero = () => {
   const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2]);
  const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);
     const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
-
+    const router = useRouter()
     const handleClick = () => alert('Hey Im clickeed') 
     const chains = [
         {
@@ -58,11 +59,14 @@ export const Hero = () => {
           pathLengthThird,
           pathLengthFourth,
           pathLengthFifth,
-        ]}  title={'StoX '} description={'Stock Simplified'} className={'z-20'}/>
+        ]}  title={'StoX '} description={'Stock Simplified'} className={'z-0'}/>
         </div>
-        <div className="w-[96%] mt-8 flex bg-white/5 py-2 px-2 h-[150px] flex-col rounded-3xl ml-auto mr-auto">
-        <div className="mt-3 mr-3 ml-8 px-6 text-end">
-            <p>View All Markets</p>
+        <div className="w-[96%] mt-8 flex bg-white/5 py-2 px-2 h-[181px] flex-col rounded-3xl ml-auto mr-auto">
+        <div className="mt-3  mr-3 ml-8 px-6 flex items-end justify-end text-end">
+            <div onClick={() => router.push('/market') } className="bg-red-200/0 h-10 cursor-pointer py-2 px-4 rounded-3xl flex border border-white w-auto">
+              <p className="font-bold">View All Markets</p>
+              <IoArrowForward className="mt-1 ml-2 mr-1 font-bold"/>
+            </div>
         </div>
         <div className="flex">
         {stocks && stocks.map((item, i) => (

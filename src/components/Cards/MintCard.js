@@ -3,12 +3,15 @@ import { GlobalContext } from "@/context/context";
 export const MintCard = ({ slug }) => {
   const { mintCard, setMintCard } = GlobalContext();
   return (
-    <div className="inset-0 fixed bg-black/15 bg-opacity-100 w-[100%] z-[99999999] min-h-screen h-auto backdrop-blur-sm flex">
+    <div className="inset-0 fixed bg-black/35 bg-opacity-100 w-[100%] z-[99999999] min-h-screen h-auto backdrop-blur-sm flex">
       <div className="lg:h-[600px] h-auto w-[80%] lg:w-[55%] py-3 px-3 mb-20 mt-12 drop-shadow-glow2 bg-black/65 rounded-3xl ml-auto mr-auto">
-        <div className="h-[52px] mb-10 flex flex-col items-end py-2 px-4 bg-red-300/0 w-[100%]">
+      <div className="h-[52px] mb-10 flex items-end py-2 px-4 bg-red-300/0 w-[100%]">
+            <div className="ml-4 mr-auto font-bold text-2xl">
+                <p>Mint</p>
+            </div>
           <div
             onClick={() => setMintCard(false)}
-            className="h-8 w-[78px] py-0.5 px-6 border hover:bg-white/95 hover:text-black  border-white rounded-2xl"
+            className="h-8 w-[78px] py-0.5 px-6 border ml-auto mr-6 hover:bg-white/95 hover:text-black  border-white rounded-2xl"
           >
             <p className="w-20 font-bold ">esc</p>
           </div>
@@ -52,7 +55,7 @@ export const MintCard = ({ slug }) => {
                 </p>
               </div>
               <div className="bg-white/0 flex items-center rounded-xl py-3 px-3 h-24 w-[96%] mt-12 ml-auto mr-auto ">
-                <button className="ml-auto mr-auto h-10 rounded-xl border border-white w-[70%] bg-green-700/45">Mint X{slug}</button>
+                <button className="ml-auto mr-auto h-10 rounded-xl border border-white w-[70%] hover:bg-green-500/95 hover:text-white ">Mint X{slug}</button>
               </div>
             </div>
           </div>

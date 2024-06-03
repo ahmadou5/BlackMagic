@@ -6,8 +6,11 @@ export const microContext = createContext({})
 
 export const MicroContextProvider = ({children}) => {
     const [mintCard, setMintCard] = useState(false)
+    const [redeemCard, setRedeemCard] = useState(false)
     const value = {
         mintCard, 
+        redeemCard, 
+        setRedeemCard,
         setMintCard
     }
     return (
