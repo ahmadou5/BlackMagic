@@ -38,7 +38,7 @@ export const CustomButton = () => {
                     <button
                       onClick={openConnectModal}
                       type="button"
-                      className='rounded-[3.125rem] w-[200px] h-10 bg-white/90 text-black border-[#424242]'
+                      className='rounded-[3.125rem] w-[200px] h-10 border border-white hover:bg-white/90 hover:text-black hover:border-[#424242]'
                     >
                       Connect Wallet
                     </button>

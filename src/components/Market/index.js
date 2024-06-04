@@ -1,9 +1,23 @@
 'use client'
 import { useState } from "react"
 import { useRouter } from "next/navigation"
+import { GlobalContext } from "@/context/context"
 
 export const Market2 = () => {
-
+    const { 
+        setInfo,
+        setMarket,
+        setFounded,
+        setEmployee,
+        setQuarter,
+        setWeb,
+        setCeo,
+        setIndustry,
+        setSector, 
+        setImgS,
+        setRedeemCard,
+        setMintCard
+    } = GlobalContext()
     const [search, setSearch] = useState('')
     const route = useRouter()
     const stocks = [
@@ -179,7 +193,19 @@ export const Market2 = () => {
                     chain : chain.name.toLowerCase().includes(search)
                    }).map((chain,i) => (
             <>
-            <div onClick={() => route.push(`/market/${chain.name}`) } className="w-[98%] mt-2 mb-2 cursor-pointer hover:bg-white/25 ml-auto mr-auto py-1.5 px-2.5 h-[56%] flex rounded-full bg-black/45">
+            <div onClick={() => {
+                setCeo(chain.CEO)
+                setEmployee(chain.employees)
+                setFounded(chain.founded)
+                setIndustry(chain.industry)
+                setInfo(chain.about)
+                setMarket(chain.MarketCap)
+                setQuarter(chain.headQ)
+                setSector(chain.sector)
+                setWeb(chain.site)
+                setImgS(chain.imgSrc)
+                route.push(`/market/${chain.tick}`)
+                } } className="w-[98%] mt-2 mb-2 cursor-pointer hover:bg-white/25 ml-auto mr-auto py-1.5 px-2.5 h-[56%] flex rounded-full bg-black/45">
                 <div className="w-12 h-12 rounded-full bg-white py-0.5 px-0.5 ">
                  <img  src={chain.imgSrc} className=" rounded-full" />
                 </div>
